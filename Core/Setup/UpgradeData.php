@@ -12,8 +12,7 @@ class UpgradeData implements \Magento\Framework\Setup\UpgradeDataInterface
 
     public function __construct(
         SalesSetupFactory $salesSetupFactory
-    )
-    {
+    ) {
         $this->salesSetupFactory = $salesSetupFactory;
     }
 

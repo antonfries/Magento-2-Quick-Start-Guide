@@ -12,8 +12,7 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
         \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder,
         \Magento\Cms\Api\BlockRepositoryInterface $blockRepository,
         \Magento\Cms\Api\Data\BlockInterfaceFactory $blockFactory
-    )
-    {
+    ) {
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
         $this->blockRepository = $blockRepository;
         $this->blockFactory = $blockFactory;
@@ -22,8 +21,7 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
     public function install(
         \Magento\Framework\Setup\ModuleDataSetupInterface $setup,
         \Magento\Framework\Setup\ModuleContextInterface $context
-    )
-    {
+    ) {
         $setup->startSetup();
 
         $searchCriteria = $this->searchCriteriaBuilder
@@ -43,5 +41,4 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
 
         $setup->endSetup();
     }
-
 }

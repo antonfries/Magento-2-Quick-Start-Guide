@@ -11,8 +11,7 @@ class Preferences extends \Magento\Framework\DataObject implements \Magento\Cust
         \Magelicious\ContactPreferences\Model\Entity\Attribute\Source\Contact\Preferences $preferences,
         \Magento\Customer\Model\Session $customerSession,
         array $data = []
-    )
-    {
+    ) {
         $this->preferences = $preferences;
         $this->customerSession = $customerSession;
         parent::__construct($data);
@@ -20,7 +19,8 @@ class Preferences extends \Magento\Framework\DataObject implements \Magento\Cust
 
     public function getSectionData()
     {
-        $existingPreferences = explode(',',
+        $existingPreferences = explode(
+            ',',
             $this->customerSession->getCustomer()->getContactPreferences()
         );
 

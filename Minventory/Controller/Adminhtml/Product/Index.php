@@ -2,7 +2,7 @@
 
 namespace Magelicious\Minventory\Controller\Adminhtml\Product;
 
-use \Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\ResultFactory;
 
 class Index extends \Magelicious\Minventory\Controller\Adminhtml\Product
 {
@@ -10,7 +10,7 @@ class Index extends \Magelicious\Minventory\Controller\Adminhtml\Product
     {
         $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
 
-        $resultPage->getConfig()->getTitle()->prepend((__('Micro Inventory')));
+        $resultPage->getConfig()->getTitle()->prepend(__('Micro Inventory'));
 
         return $resultPage;
     }

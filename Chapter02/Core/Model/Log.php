@@ -18,8 +18,7 @@ class Log extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
         \Magento\Catalog\Model\Product $product,
         array $data = []
-    )
-    {
+    ) {
         $this->product = $product;
         parent::__construct($context, $registry, $resource, $resourceCollection, $data);
     }

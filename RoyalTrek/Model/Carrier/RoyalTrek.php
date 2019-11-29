@@ -35,8 +35,7 @@ class RoyalTrek extends \Magento\Shipping\Model\Carrier\AbstractCarrier implemen
         \Magento\Shipping\Model\Rate\ResultFactory $rateResultFactory,
         \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory $rateMethodFactory,
         array $data = []
-    )
-    {
+    ) {
         $this->_rateResultFactory = $rateResultFactory;
         $this->_rateMethodFactory = $rateMethodFactory;
         parent::__construct($scopeConfig, $rateErrorFactory, $logger, $data);
@@ -47,7 +46,6 @@ class RoyalTrek extends \Magento\Shipping\Model\Carrier\AbstractCarrier implemen
      */
     public function collectRates(\Magento\Quote\Model\Quote\Address\RateRequest $request)
     {
-
         if (!$this->getConfigFlag('active')) {
             return false;
         }

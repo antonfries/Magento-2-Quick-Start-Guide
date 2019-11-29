@@ -10,8 +10,7 @@ class NewProductFlag
     public function __construct(
         \Magento\Framework\App\RequestInterface $request,
         \Magento\Framework\Stdlib\DateTime\TimezoneInterface $localeDate
-    )
-    {
+    ) {
         $this->request = $request;
         $this->localeDate = $localeDate;
     }

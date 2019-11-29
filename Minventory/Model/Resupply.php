@@ -12,8 +12,7 @@ class Resupply
         \Magento\Catalog\Api\ProductRepositoryInterface $productRepository,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $collectionFactory,
         \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistry
-    )
-    {
+    ) {
         $this->productRepository = $productRepository;
         $this->collectionFactory = $collectionFactory;
         $this->stockRegistry = $stockRegistry;

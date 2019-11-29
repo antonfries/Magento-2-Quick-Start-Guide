@@ -13,8 +13,7 @@ class ProductDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $collectionFactory,
         array $meta = [],
         array $data = []
-    )
-    {
+    ) {
         parent::__construct(
             $name,
             $primaryFieldName,

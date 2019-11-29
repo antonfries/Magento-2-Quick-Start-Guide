@@ -2,9 +2,6 @@
 
 namespace Magelicious\ContactPreferences\Controller\Contact;
 
-use Magento\Framework\App\Action\Context;
-use phpDocumentor\Reflection\Types\Boolean;
-
 class Preferences extends \Magento\Customer\Controller\AbstractAccount
 {
     protected $customerSession;
@@ -16,8 +13,7 @@ class Preferences extends \Magento\Customer\Controller\AbstractAccount
         \Magento\Customer\Model\Session $customerSession,
         \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository,
         \Psr\Log\LoggerInterface $logger
-    )
-    {
+    ) {
         $this->customerSession = $customerSession;
         $this->customerRepository = $customerRepository;
         $this->logger = $logger;
@@ -32,7 +28,8 @@ class Preferences extends \Magento\Customer\Controller\AbstractAccount
                 // This POST is merely to trigger "contact_preferences" section load
             } else {
                 try {
-                    $preferences = implode(',',
+                    $preferences = implode(
+                        ',',
                         array_keys(
                             array_filter($this->getRequest()->getParams(), function ($_checked, $_preference) {
                                 return filter_var($_checked, FILTER_VALIDATE_BOOLEAN);

@@ -8,8 +8,7 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
 
     public function __construct(
         \Magento\Customer\Setup\CustomerSetupFactory $customerSetupFactory
-    )
-    {
+    ) {
         $this->customerSetupFactory = $customerSetupFactory;
     }
 

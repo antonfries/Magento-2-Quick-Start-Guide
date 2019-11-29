@@ -14,8 +14,7 @@ class SizeGuide extends \Magento\Cms\Block\Block implements \Magento\Framework\D
         \Magento\Cms\Model\BlockFactory $blockFactory,
         \Magento\Framework\Registry $coreRegistry,
         array $data = []
-    )
-    {
+    ) {
         $this->coreRegistry = $coreRegistry;
         parent::__construct($context, $filterProvider, $storeManager, $blockFactory, $data);
     }

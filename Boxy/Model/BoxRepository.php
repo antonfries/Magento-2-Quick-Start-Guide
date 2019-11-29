@@ -16,8 +16,7 @@ class BoxRepository implements \Magelicious\Boxy\Api\BoxRepositoryInterface
         \Magelicious\Boxy\Model\ResourceModel\Box\CollectionFactory $boxCollectionFactory,
         \Magelicious\Boxy\Api\Data\BoxSearchResultsInterfaceFactory $searchResultsFactory,
         \Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface $collectionProcessor
-    )
-    {
+    ) {
         $this->boxFactory = $boxFactory;
         $this->boxResourceModel = $boxResourceModel;
         $this->boxCollectionFactory = $boxCollectionFactory;

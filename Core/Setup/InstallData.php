@@ -2,7 +2,7 @@
 
 namespace Magelicious\Core\Setup;
 
-use \Magento\Framework\Setup\InstallDataInterface;
+use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
@@ -12,8 +12,7 @@ class InstallData implements InstallDataInterface
 
     public function __construct(
         \Magento\Customer\Setup\CustomerSetupFactory $customerSetupFactory
-    )
-    {
+    ) {
         $this->customerSetupFactory = $customerSetupFactory;
     }
 

@@ -13,8 +13,7 @@ class Cutoff extends \Magento\Framework\View\Element\Template implements \Magent
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Framework\Stdlib\DateTime\TimezoneInterface $localeDate,
         array $data = []
-    )
-    {
+    ) {
         $this->coreRegistry = $coreRegistry;
         $this->localeDate = $localeDate;
         parent::__construct($context, $data);

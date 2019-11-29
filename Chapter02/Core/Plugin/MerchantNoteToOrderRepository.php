@@ -8,8 +8,7 @@ class MerchantNoteToOrderRepository
 
     public function __construct(
         \Magento\Sales\Api\Data\OrderExtensionFactory $orderExtensionFactory
-    )
-    {
+    ) {
         $this->orderExtensionFactory = $orderExtensionFactory;
     }
 
@@ -21,8 +20,7 @@ class MerchantNoteToOrderRepository
     public function afterGetList(
         \Magento\Sales\Api\OrderRepositoryInterface $subject,
         \Magento\Sales\Model\ResourceModel\Order\Collection $order
-    )
-    {
+    ) {
         foreach ($order->getItems() as $_order) {
             $this->afterGet($subject, $_order);
         }
@@ -37,8 +35,7 @@ class MerchantNoteToOrderRepository
     public function afterGet(
         \Magento\Sales\Api\OrderRepositoryInterface $subject,
         \Magento\Sales\Api\Data\OrderInterface $order
-    )
-    {
+    ) {
         $order = $this->getMerchantNoteAttribute($order);
         return $order;
     }
@@ -46,8 +43,7 @@ class MerchantNoteToOrderRepository
     public function beforeSave(
         \Magento\Sales\Api\OrderRepositoryInterface $subject,
         \Magento\Sales\Api\Data\OrderInterface $order
-    )
-    {
+    ) {
         $order = $this->saveMerchantNoteAttribute($order);
 
         return [$order];

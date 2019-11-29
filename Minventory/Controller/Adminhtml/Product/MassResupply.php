@@ -2,7 +2,7 @@
 
 namespace Magelicious\Minventory\Controller\Adminhtml\Product;
 
-use \Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\ResultFactory;
 
 class MassResupply extends \Magelicious\Minventory\Controller\Adminhtml\Product
 {
@@ -15,8 +15,7 @@ class MassResupply extends \Magelicious\Minventory\Controller\Adminhtml\Product
         \Magento\Ui\Component\MassAction\Filter $filter,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $collectionFactory,
         \Magelicious\Minventory\Model\Resupply $resupply
-    )
-    {
+    ) {
         parent::__construct($context);
         $this->filter = $filter;
         $this->collectionFactory = $collectionFactory;

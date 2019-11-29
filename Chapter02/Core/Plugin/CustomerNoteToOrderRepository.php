@@ -10,8 +10,7 @@ class CustomerNoteToOrderRepository
     public function __construct(
         \Magento\Sales\Api\Data\OrderExtensionFactory $orderExtensionFactory,
         \Magelicious\Core\Api\Data\CustomerNoteInterfaceFactory $customerNoteInterfaceFactory
-    )
-    {
+    ) {
         $this->orderExtensionFactory = $orderExtensionFactory;
         $this->customerNoteInterfaceFactory = $customerNoteInterfaceFactory;
     }
@@ -24,8 +23,7 @@ class CustomerNoteToOrderRepository
     public function afterGetList(
         \Magento\Sales\Api\OrderRepositoryInterface $subject,
         \Magento\Sales\Model\ResourceModel\Order\Collection $resultOrder
-    )
-    {
+    ) {
         foreach ($resultOrder->getItems() as $order) {
             $this->afterGet($subject, $order);
         }
@@ -40,8 +38,7 @@ class CustomerNoteToOrderRepository
     public function afterGet(
         \Magento\Sales\Api\OrderRepositoryInterface $subject,
         \Magento\Sales\Api\Data\OrderInterface $resultOrder
-    )
-    {
+    ) {
         $resultOrder = $this->getCustomerNoteAttribute($resultOrder);
         return $resultOrder;
     }
@@ -54,8 +51,7 @@ class CustomerNoteToOrderRepository
     public function afterSave(
         \Magento\Sales\Api\OrderRepositoryInterface $subject,
         \Magento\Sales\Api\Data\OrderInterface $resultOrder
-    )
-    {
+    ) {
         $resultOrder = $this->saveCustomerNoteAttribute($resultOrder);
         return $resultOrder;
     }

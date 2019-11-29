@@ -2,7 +2,7 @@
 
 namespace Magelicious\Minventory\Controller\Adminhtml\Product;
 
-use \Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\ResultFactory;
 
 class Resupply extends \Magelicious\Minventory\Controller\Adminhtml\Product
 {
@@ -15,8 +15,7 @@ class Resupply extends \Magelicious\Minventory\Controller\Adminhtml\Product
         \Magento\Catalog\Api\ProductRepositoryInterface $productRepository,
         \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistry,
         \Magelicious\Minventory\Model\Resupply $resupply
-    )
-    {
+    ) {
         parent::__construct($context);
         $this->productRepository = $productRepository;
         $this->stockRegistry = $stockRegistry;
@@ -35,7 +34,7 @@ class Resupply extends \Magelicious\Minventory\Controller\Adminhtml\Product
             return $redirectResult->setPath('minventory/product/index');
         } else {
             $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-            $resultPage->getConfig()->getTitle()->prepend((__('Stock Resupply')));
+            $resultPage->getConfig()->getTitle()->prepend(__('Stock Resupply'));
             return $resultPage;
         }
     }

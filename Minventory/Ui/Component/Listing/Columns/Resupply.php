@@ -12,8 +12,7 @@ class Resupply extends \Magento\Ui\Component\Listing\Columns\Column
         \Magento\Framework\UrlInterface $urlBuilder,
         array $components = [],
         array $data = []
-    )
-    {
+    ) {
         $this->urlBuilder = $urlBuilder;
         parent::__construct($context, $uiComponentFactory, $components, $data);
     }

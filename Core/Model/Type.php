@@ -8,8 +8,7 @@ class Type
 
     public function __construct(
         \Magento\Framework\ObjectManagerInterface $objectManager
-    )
-    {
+    ) {
         $this->objectManager = $objectManager;
     }
 

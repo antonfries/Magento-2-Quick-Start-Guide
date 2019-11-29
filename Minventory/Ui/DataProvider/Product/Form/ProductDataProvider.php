@@ -17,9 +17,9 @@ class ProductDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         \Magento\Catalog\Api\ProductRepositoryInterface $productRepository,
         \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistry,
         \Magento\Framework\App\RequestInterface $request,
-        array $meta = [], array $data = []
-    )
-    {
+        array $meta = [],
+        array $data = []
+    ) {
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->collection = $collectionFactory->create();
         $this->productRepository = $productRepository;

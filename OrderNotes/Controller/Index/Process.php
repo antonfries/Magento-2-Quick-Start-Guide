@@ -11,8 +11,7 @@ class Process extends \Magelicious\OrderNotes\Controller\Index
         \Magento\Framework\App\Action\Context $context,
         \Magento\Checkout\Model\Session $checkoutSession,
         \Psr\Log\LoggerInterface $logger
-    )
-    {
+    ) {
         $this->checkoutSession = $checkoutSession;
         $this->logger = $logger;
         parent::__construct($context);
@@ -21,7 +20,6 @@ class Process extends \Magelicious\OrderNotes\Controller\Index
     public function execute()
     {
         try {
-
             if ($notes = $this->getRequest()->getParam('order_notes', null)) {
                 $quote = $this->checkoutSession->getQuote();
                 $quote->setOrderNotes($notes);
